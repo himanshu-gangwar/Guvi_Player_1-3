@@ -14,9 +14,14 @@ class Guvi_AddFullStop_4
 	
 	StringBuilder so=new StringBuilder(str);
 	
-	so.insert(str.length(),'.');
+	if(str.charAt(str.length()-1)=='.')
+		System.out.println("No need of a period its already there");
 	
-	System.out.println(so);
+	else
+	{
+		so.insert(str.length(),'.');
+		System.out.println(so);
+	}
      }
 	
 }
